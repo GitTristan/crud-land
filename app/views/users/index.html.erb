@@ -3,9 +3,11 @@
   <%= link_to "New User", new_user_path %><br />
     <br></br>
   <% @users.each do |u| %>
-  <%= link_to a.email, user_path(u) %><br />
+  <%= link_to u.email, user_path(u) %><br />
+  <%= link_to "Edit", edit_user_path(u) %>
   <%= link_to "Delete", user_path(u), method: :delete, data: {confirm: "Are you sure?"} %>
 
-
+  <br />
   <br />
   <% end %>
+<ls>
